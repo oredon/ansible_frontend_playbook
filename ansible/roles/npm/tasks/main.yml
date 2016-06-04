@@ -1,0 +1,5 @@
+-
+  name: Install npm
+  command: npm install -g gulp webpack bower
+  with_items: npmpkgs
+  tags: npm

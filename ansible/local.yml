@@ -1,0 +1,11 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  roles:
+    - role: common
+    - role: rbenv              # rbenv,ruby,ruby-multi playbook
+    - role: ruby-multi         # Special thanks: leucos/ansible-rbenv-playbook
+      versions: $ruby_versions # Github: https://github.com/leucos/ansible-rbenv-playbook
+    - role: gem
+    - role: node
+    - role: npm

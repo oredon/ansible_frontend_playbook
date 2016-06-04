@@ -1,0 +1,12 @@
+- name: Install ruby-dev for gem
+  apt: pkg={{ item }} state=installed
+  sudo: true
+  with_items:
+    - ruby-dev
+  tags: gem
+
+- name: Install gem pkgs
+  command: gem install {{ item }}
+  sudo: yes
+  with_items: gempkgs
+  tags: gem

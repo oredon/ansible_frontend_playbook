@@ -1,0 +1,8 @@
+- name: Download setup shell for nodejs
+  get_url: url="https://deb.nodesource.com/setup_{{node_version}}" dest="/tmp/setup_node.sh" mode=0755
+
+- name: Setup nodejs
+  shell: /tmp/setup_node.sh
+
+- name: Install nodejs
+  apt: name=nodejs state=latest

@@ -1,0 +1,65 @@
+# for common role
+user:
+  name: vagrant
+
+essentialpkg:
+  - git
+  - vim
+  - curl
+  - build-essential
+  - libssl-dev
+  - libffi-dev
+
+# for gem role
+gempkgs:
+  - compass
+
+# for npm role
+npmpkgs:
+  - webpack
+  - gulp
+
+# rbenv,ruby,ruby-multi settings.---------------------------
+# Fill if needed
+rbenv_makeopts: ""
+
+# Which user do we want to install ruby for
+ruby_deploy_user: vagrant
+
+# Which versions we want to install (see `rbenv install -l`)
+ruby_versions:
+    - 2.1.10
+
+# The default version (used with `rbenv global`)
+ruby_default: "2.1.10"
+
+# Dependencies required to build ruby
+# YMMV if you want something else than MRI
+ruby_deps:
+  - autoconf
+  - automake
+  - bison
+  - build-essential
+  - curl
+  - exuberant-ctags
+  - git-core
+  - libreadline6
+  - libreadline6-dev
+  - libreadline-dev
+  - libsqlite3-0
+  - libsqlite3-dev
+  - libssl-dev
+  - libyaml-dev
+  - libc6-dev
+  - libncurses5-dev
+  - libtool
+  - libxml2-dev
+  - libxslt1-dev
+  - openssl
+  - sqlite3
+  - subversion
+  - zlib1g
+  - zlib1g-dev
+
+# node settings.---------------------------
+node_version: 6.x
